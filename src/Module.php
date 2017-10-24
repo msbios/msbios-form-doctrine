@@ -3,12 +3,15 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
+
 namespace MSBios\Form\Doctrine;
 
+use MSBios\Doctrine\Initializer\ObjectManagerInitializer;
 use MSBios\ModuleInterface;
 use Zend\Loader\AutoloaderFactory;
 use Zend\Loader\StandardAutoloader;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Zend\ModuleManager\Feature\FormElementProviderInterface;
 
 /**
  * Class Module
@@ -16,10 +19,11 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
  */
 class Module implements
     ModuleInterface,
-    AutoloaderProviderInterface
+    AutoloaderProviderInterface,
+    FormElementProviderInterface
 {
     /** @const VERSION */
-    const VERSION = '0.0.1';
+    const VERSION = '1.0.1';
 
     /**
      * @return mixed
@@ -41,6 +45,21 @@ class Module implements
                 StandardAutoloader::LOAD_NS => [
                     __NAMESPACE__ => __DIR__,
                 ],
+            ],
+        ];
+    }
+
+    /**
+     * Expected to return \Zend\ServiceManager\Config object or array to
+     * seed such an object.
+     *
+     * @return array|\Zend\ServiceManager\Config
+     */
+    public function getFormElementConfig()
+    {
+        return [
+            'initializers' => [
+                new ObjectManagerInitializer
             ],
         ];
     }
