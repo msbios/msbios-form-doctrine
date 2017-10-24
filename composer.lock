@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ecb6326da05263ce290348c3fdd5a61",
+    "content-hash": "91d2844a8f6b38bea24f240115ef4b30",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -876,6 +876,58 @@
                 "php"
             ],
             "time": "2017-10-24T10:18:18+00:00"
+        },
+        {
+            "name": "msbios/form",
+            "version": "v1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/msbios/msbios-form.git",
+                "reference": "7e884633a0e589e5775d5b653c233e9d1ab7ee4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/msbios/msbios-form/zipball/7e884633a0e589e5775d5b653c233e9d1ab7ee4f",
+                "reference": "7e884633a0e589e5775d5b653c233e9d1ab7ee4f",
+                "shasum": ""
+            },
+            "require": {
+                "msbios/msbios": "~1.0",
+                "zendframework/zend-form": "^2.10"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0",
+                "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "MSBios\\Form"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MSBios\\Form\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "Judzhin Miles",
+                    "email": "info@msbios.com"
+                }
+            ],
+            "description": "MSBios Form",
+            "homepage": "https://github.com/msbios/msbios-form",
+            "keywords": [
+                "php"
+            ],
+            "time": "2017-10-24T11:25:22+00:00"
         },
         {
             "name": "msbios/json",
