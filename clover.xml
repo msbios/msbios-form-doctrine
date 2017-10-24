@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1508844507">
+  <project timestamp="1508844507">
+    <package name="MSBios\Form\Doctrine">
+      <file name="/Users/judzhin/Projects/_modules/msbios-form-doctrine/src/Module.php">
+        <class name="Module" namespace="MSBios\Form\Doctrine" fullPackage="MSBios" package="MSBios">
+          <metrics complexity="3" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="2" elements="7" coveredelements="3"/>
+        </class>
+        <line num="31" type="method" name="getConfig" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="41" type="method" name="getAutoloaderConfig" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="58" type="method" name="getFormElementConfig" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <metrics loc="66" ncloc="43" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="2" elements="7" coveredelements="3"/>
+      </file>
+    </package>
+    <metrics files="1" loc="66" ncloc="43" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="2" elements="7" coveredelements="3"/>
+  </project>
+</coverage>

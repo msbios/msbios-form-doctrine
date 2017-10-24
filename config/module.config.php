@@ -7,13 +7,6 @@
 namespace MSBios\Form\Doctrine;
 
 return [
-
-    'form_elements' => [
-        'initializers' => [
-            new Initializer\ObjectManagerInitializer
-        ],
-    ],
-
     Module::class => [
 
     ]
