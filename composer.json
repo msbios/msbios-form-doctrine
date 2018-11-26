@@ -1,7 +1,7 @@
 {
   "name": "msbios/form-doctrine",
   "description": "MSBios Form Doctrine",
-  "license": "GPL",
+  "license": "MIT",
   "keywords": [
     "php"
   ],
