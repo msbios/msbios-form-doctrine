@@ -6,12 +6,10 @@
 
 namespace MSBios\Form\Doctrine;
 
-use MSBios\Doctrine\Initializer\ObjectManagerInitializer;
 use MSBios\ModuleInterface;
 use Zend\Loader\AutoloaderFactory;
 use Zend\Loader\StandardAutoloader;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\FormElementProviderInterface;
 
 /**
  * Class Module
@@ -19,14 +17,15 @@ use Zend\ModuleManager\Feature\FormElementProviderInterface;
  */
 class Module implements
     ModuleInterface,
-    AutoloaderProviderInterface,
-    FormElementProviderInterface
+    AutoloaderProviderInterface
 {
     /** @const VERSION */
-    const VERSION = '1.0.4';
+    const VERSION = '1.0.5';
 
     /**
-     * @return mixed
+     * @inheritdoc
+     *
+     * @return array|mixed|\Traversable
      */
     public function getConfig()
     {
@@ -34,7 +33,7 @@ class Module implements
     }
 
     /**
-     * Return an array for passing to Zend\Loader\AutoloaderFactory.
+     * @inheritdoc
      *
      * @return array
      */
@@ -45,21 +44,6 @@ class Module implements
                 StandardAutoloader::LOAD_NS => [
                     __NAMESPACE__ => __DIR__,
                 ],
-            ],
-        ];
-    }
-
-    /**
-     * Expected to return \Zend\ServiceManager\Config object or array to
-     * seed such an object.
-     *
-     * @return array|\Zend\ServiceManager\Config
-     */
-    public function getFormElementConfig()
-    {
-        return [
-            'initializers' => [
-                new ObjectManagerInitializer
             ],
         ];
     }

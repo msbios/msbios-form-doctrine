@@ -24,10 +24,10 @@
     }
   },
   "require": {
-    "msbios/doctrine": "^1.0",
     "msbios/form": "^1.0"
   },
   "require-dev": {
+    "msbios/doctrine": "^1.0",
     "msbios/test": "^1.0"
   },
   "scripts": {
