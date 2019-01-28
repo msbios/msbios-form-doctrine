@@ -14,11 +14,42 @@ use PHPUnit\Framework\TestCase;
  */
 class ModuleTest extends TestCase
 {
+    /** @var Module */
+    protected $instance;
+
     /**
-     *
+     * @constructor
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->instance = new Module;
+    }
+
+    /**
+     * @return $this
+     */
+    public function testGetConfig()
+    {
+        $this->assertIsArray($this->instance->getConfig());
+        return $this;
+    }
+
+    /**
+     * @return $this
      */
     public function testGetAutoloaderConfig()
     {
-        $this->assertInternalType('array', (new Module)->getAutoloaderConfig());
+        $this->assertIsArray($this->instance->getAutoloaderConfig());
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function testGetFormElementConfig()
+    {
+        $this->assertIsArray($this->instance->getFormElementConfig());
+        return $this;
     }
 }
